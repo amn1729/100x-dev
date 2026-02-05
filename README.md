@@ -20,5 +20,5 @@ For example (in Settings JSON):
 * `1000x.powerLevel`: 20000,
 * `1000x.boostLevel`: 40000,
 
-
+## Disclaimer
 > If you can't tell, this is sarcasm. Real 100x devs uses Emacs.
