@@ -1,0 +1,55 @@
+{
+  "name": "100x",
+  "displayName": "100x-dev",
+  "description": "Be a 100x Dev",
+  "version": "0.0.1",
+  "publisher": "amn1729",
+  "engines": {
+    "vscode": "^1.108.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "100x Dev",
+      "properties": {
+        "100x.powerLevel": {
+          "type": "number",
+          "default": 5000,
+          "description": "100x power level"
+        },
+        "100x.boostLevel": {
+          "type": "number",
+          "default": 5000,
+          "description": "100x boost level"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "100x.transform",
+        "title": "100x Transform"
+      },
+      {
+        "command": "100x.revert",
+        "title": "100x Revert"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "pnpm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.109.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.2",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
