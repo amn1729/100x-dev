@@ -17,8 +17,8 @@ Dev should have more than 2 brain cells to use this extension.
 You can set your power level and boost level to go even further.
 
 For example (in Settings JSON):
-* `1000x.powerLevel`: 20000,
-* `1000x.boostLevel`: 40000,
+* `100x.powerLevel`: 20000,
+* `100x.boostLevel`: 40000,
 
 ## Disclaimer
 > If you can't tell, this is sarcasm. Real 100x devs uses Emacs (or Nvim).
