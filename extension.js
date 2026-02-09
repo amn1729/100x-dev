@@ -23,8 +23,8 @@ async function handel100xing() {
   });
 }
 
-async function start100xing(boost) {
-  const randomInterval = randomInt(2000, 7000);
+async function start100xing(power, boost) {
+  const randomInterval = randomInt(power, power + boost);
   clearInterval(intervalId);
   intervalId = setInterval(handel100xing, randomInterval);
 }
@@ -36,7 +36,7 @@ function activate(context) {
     const boost = config.get("boostLevel") || 5000;
 
     if (intervalId) clearInterval(intervalId);
-    intervalId = setInterval(() => start100xing(boost), power);
+    intervalId = setInterval(() => start100xing(power, boost), power);
   });
 
   const stopCommand = vscode.commands.registerCommand("100x.revert", () => {
